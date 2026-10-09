@@ -1,0 +1,18 @@
+{
+  "source_repository": "picostar/Convergia_SMPP",
+  "source_commit": "ad8ef61",
+  "sha256": {
+    "scripts/qualify-gateway.py": "0eba41f87f50b363efef28b9702ce12371b949a73cb6ce5daf030f130786bf02",
+    "scripts/test-gateway-qualification.py": "46b3552f4ecfb8edb85af2ada0eed945a38bf5a15901bd4d6fa2ee404d083ba7",
+    "tools/gateway-qualification/case.py": "cdd8321c3f62b779664d65a51b54aa20ef72320a9dab505634ca89ef4ca31fae",
+    "tools/gateway-qualification/peer.js": "d960799edba509ae819cae9847d1a1f3bf67ab468dbd71fb28c776d7751728fa",
+    "tools/gateway-qualification/compose.yaml": "1f85d8b06b8959f7f2daaa1de6d2635a8f90f0be423d4e2c1a427a506efa10b5",
+    "tools/smpp-lab/package.json": "03ef5765132f9d5b9b1532025938863c3e91c71069a22d646790a3807239899d",
+    "tools/smpp-lab/package-lock.json": "f906307c9b858bc28a738471f8a4aaf6daa7a43ca823d8bc6a4463758ad1bb88"
+  },
+  "adaptations": [
+    "Only Console class retained from setup-cmi-bind-only.py; all cloud/secret provisioning code omitted.",
+    "Candidate Dockerfile and prepare.py record source-built engine, never patch installed engine.",
+    "Compose lab image name changed to avoid replacing the local baseline image."
+  ]
+}

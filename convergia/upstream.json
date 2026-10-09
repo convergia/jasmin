@@ -1,0 +1,8 @@
+{
+  "upstream": "jookies/jasmin",
+  "maintenance_branch": "convergia",
+  "source_baseline": "eb75667381ba7f9859456717130c348a8dfbb653",
+  "watched_issues": [1257, 1162],
+  "watched_pull_requests": [1259, 1263],
+  "tracking_label": "upstream-update"
+}

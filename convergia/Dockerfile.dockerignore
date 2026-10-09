@@ -1,0 +1,15 @@
+**
+!jasmin/
+!jasmin/**
+!misc/
+!misc/**
+!convergia/
+!convergia/requirements.txt
+!setup.py
+!MANIFEST.in
+!README.rst
+!LICENSE
+!requirements.txt
+!requirements-test.txt
+**/__pycache__/
+**/*.pyc

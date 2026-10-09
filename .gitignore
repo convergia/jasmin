@@ -58,3 +58,13 @@ celerybeat-schedule.db
 *.rpm
 
 .env
+
+# Convergia generated candidate evidence
+convergia/qualification/archive/
+convergia/results/
+convergia/upstream-observation.json
+convergia/dependency-audit.json
+qualified-image.json
+convergia/qualified-engine.tar.gz
+secrets.md
+.env

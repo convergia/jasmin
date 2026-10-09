@@ -1,0 +1,32 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.9.27-alpine
+    healthcheck:
+      test: [CMD, rabbitmq-diagnostics, -q, ping]
+      interval: 2s
+      timeout: 5s
+      retries: 60
+    networks: [qualification]
+  redis:
+    image: redis:6.0.16-alpine
+    # Match the current lab persistence posture; do not improve it in the test.
+    command: [redis-server, --appendonly, 'no', --save, '900 1 300 10 60 10000']
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+    networks: [qualification]
+  lab:
+    image: convergia-jasmin-qualification:local
+    build:
+      context: ../..
+      dockerfile: tools/gateway-qualification/Dockerfile
+    command: [sleep, infinity]
+    depends_on:
+      rabbitmq: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    networks: [qualification]
+networks:
+  qualification:
+    internal: true

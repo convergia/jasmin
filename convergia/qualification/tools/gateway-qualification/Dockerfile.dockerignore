@@ -1,0 +1,11 @@
+**
+!tools/
+!tools/smpp-lab/
+!tools/smpp-lab/package.json
+!tools/smpp-lab/package-lock.json
+!tools/gateway-qualification/
+!tools/gateway-qualification/**
+!scripts/
+!scripts/setup-cmi-bind-only.py
+**/__pycache__/
+**/*.pyc
